@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-    <p>Hi I work</p>
-</body>
-</html>
+﻿@model IEnumerable<Gummi.Models.Product>
+
+@{
+    ViewData["Title"] = "Gummi - Home";
+    Layout = "_Layout";
+}
+
+<h1>Gummi</h1>
+
+<p>@Html.ActionLink("Product List", "Index", "Product")</p>

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Gummi.Models.Product>
+
+@{
+    ViewData["Title"] = "Product";
+    Layout = "_Layout";
+}
+
+
+<ul>
+    @foreach (var product in Model)
+    {
+    <li>
+        @Html.DisplayFor(modelLocation => product.Name): @Html.DisplayFor(modelLocation => product.Description) | @Html.DisplayFor(modelLocation => product.Cost)
+        @Html.ActionLink("Edit", "edit", new { id = product.Id }) |
+        @Html.ActionLink("Details", "details", new { id = product.Id }) |
+        @Html.ActionLink("Delete", "delete", new { id = product.Id })
+    </li>
+    }
+</ul>
