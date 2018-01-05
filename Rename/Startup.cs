@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Rename
+namespace Gummi
 {
 	public class Startup
 	{
