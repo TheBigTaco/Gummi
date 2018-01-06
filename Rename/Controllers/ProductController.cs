@@ -16,5 +16,17 @@ namespace Gummi.Controllers
 		{
 			return View(db.Products.ToList());
 		}
-	}
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            db.Products.Add(product);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+    }
 }
